@@ -20,9 +20,9 @@ RUN rm -rf /var/www/* && \
     cp -r /tmp/mediawiki*/* /var/www/ && \
     rm -rf /tmp/mediawiki*
 
-ADD nginx.conf.mediawiki /etc/nginx/nginx.conf
-ADD php5-fpm.ini.mediawiki /etc/php5/fpm/pool.d/www.conf
-ADD entrypoint.sh.mediawiki /entrypoint.sh
+ADD nginx.conf /etc/nginx/nginx.conf
+ADD php5-fpm.ini /etc/php5/fpm/pool.d/www.conf
+ADD entrypoint.sh /entrypoint.sh
 
 EXPOSE 80
 
