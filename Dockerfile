@@ -1,7 +1,13 @@
 FROM nginx
 
+MAINTAINER Igor Shishkin <me@teran.ru>
+LABEL application=mediawiki
+LABEL version=1.27.1
+LABEL description="Mediawiki==1.27.1 with nginx and php5-fpm"
+
 RUN apt-get update && \
     apt-get dist-upgrade -y
+
 RUN apt-get install -y \
     php5-apcu \
     php5-fpm \
@@ -12,9 +18,7 @@ RUN apt-get install -y \
     apt-get clean && \
     rm -rvf /var/lib/apt/lists/*
 
-RUN wget -O /tmp/mediawiki.tgz \
-    https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.1.tar.gz
-RUN rm -rf /var/www/* && \
+RUN wget -O /tmp/mediawiki.tgz https://releases.wikimedia.org/mediawiki/1.27/mediawiki-1.27.1.tar.gz && \
     mkdir -p /var/www && \
     tar xzf /tmp/mediawiki.tgz -C /tmp && \
     cp -r /tmp/mediawiki*/* /var/www/ && \
