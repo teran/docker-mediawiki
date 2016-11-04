@@ -10,5 +10,6 @@ RUN wget -O /tmp/mediawiki.tgz https://releases.wikimedia.org/mediawiki/1.27/med
     tar xzf /tmp/mediawiki.tgz -C /tmp && \
     cp -r /tmp/mediawiki*/* /var/www/ && \
     rm -rf /tmp/mediawiki*
+ADD nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
