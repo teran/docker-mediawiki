@@ -1,5 +1,5 @@
 ![Layers size](https://images.microbadger.com/badges/image/teran/mediawiki.svg)
-[![Docker Automated build](https://img.shields.io/docker/automated/teran/mediawiki.svg)
+[![Docker Automated build](https://img.shields.io/docker/automated/teran/mediawiki.svg)](https://hub.docker.com/r/teran/mediawiki/)
 
 ## What is it?
 Mediawiki in docker container using ngin + php5-fpm
