@@ -1,14 +1,18 @@
 FROM teran/php5-fpm:latest
 
 MAINTAINER Igor Shishkin <me@teran.ru>
+
+ARG major=1.30
+ARG minor=0
+
 LABEL application=mediawiki
-LABEL version=1.29.2
-LABEL description="Mediawiki==1.29.2 with nginx and php5-fpm"
+LABEL version=${major}.${minor}
+LABEL description="Mediawiki==${major}.${minor} with nginx and php5-fpm"
 
 RUN wget -O- https://www.mediawiki.org/keys/keys.txt | gpg --import
 
-RUN wget -O /tmp/mediawiki.tgz https://releases.wikimedia.org/mediawiki/1.29/mediawiki-1.29.2.tar.gz && \
-    wget -O /tmp/mediawiki.sig https://releases.wikimedia.org/mediawiki/1.29/mediawiki-1.29.2.tar.gz.sig && \
+RUN wget -O /tmp/mediawiki.tgz https://releases.wikimedia.org/mediawiki/${major}/mediawiki-${major}.${minor}.tar.gz && \
+    wget -O /tmp/mediawiki.sig https://releases.wikimedia.org/mediawiki/${major}/mediawiki-${major}.${minor}.tar.gz.sig && \
     gpg --verify /tmp/mediawiki.sig /tmp/mediawiki.tgz && \
     mkdir -p /var/www && \
     tar xzf /tmp/mediawiki.tgz -C /tmp && \
