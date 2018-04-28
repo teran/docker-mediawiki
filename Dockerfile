@@ -1,4 +1,4 @@
-FROM teran/php5-fpm:latest
+FROM teran/php7-fpm:latest
 
 MAINTAINER Igor Shishkin <me@teran.ru>
 
@@ -7,7 +7,7 @@ ARG minor=0
 
 LABEL application=mediawiki
 LABEL version=${major}.${minor}
-LABEL description="Mediawiki==${major}.${minor} with nginx and php5-fpm"
+LABEL description="Mediawiki==${major}.${minor} with nginx and php7-fpm"
 
 RUN wget -O- https://www.mediawiki.org/keys/keys.txt | gpg --import
 
