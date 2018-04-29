@@ -2,7 +2,7 @@
 [![Docker Automated build](https://img.shields.io/docker/automated/teran/mediawiki.svg)](https://hub.docker.com/r/teran/mediawiki/)
 
 ## What is it?
-Mediawiki in docker container using ngin + php5-fpm
+Mediawiki in docker container using nginx + php5-fpm
 
 ## Which version?
 `latest` tag always points to the most recent release.
