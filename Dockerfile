@@ -2,8 +2,8 @@ FROM teran/php7-fpm:latest
 
 MAINTAINER Igor Shishkin <me@teran.ru>
 
-ARG major=1.30
-ARG minor=0
+ARG major=1.31
+ARG minor=0-rc.0
 
 LABEL application=mediawiki
 LABEL version=${major}.${minor}
