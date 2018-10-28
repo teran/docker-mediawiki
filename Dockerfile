@@ -3,7 +3,7 @@ FROM teran/php7-fpm:latest
 MAINTAINER Igor Shishkin <me@teran.ru>
 
 ARG major=1.31
-ARG minor=0
+ARG minor=1
 
 LABEL application=mediawiki
 LABEL version=${major}.${minor}
