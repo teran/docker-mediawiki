@@ -1,7 +1,7 @@
 FROM teran/php7-fpm@sha256:11cb7fdf6790e0a89559f3337d3765472cb9e4e0c3b249d759ae96b3b43b5cde
 
 ARG major=1.32
-ARG minor=0-rc.0
+ARG minor=0
 
 LABEL application=mediawiki
 LABEL version=${major}.${minor}
